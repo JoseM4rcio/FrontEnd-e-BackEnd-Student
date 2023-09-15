@@ -1,0 +1,31 @@
+<div class="row">
+    <div class="col-8 m-auto">
+      <form [formGroup]="formGroupStudent">
+        <div class="mb-3">
+          <div class="display-6 text-center p-3">Cadastro de Estudantes</div>
+          <label for="name" class="form-label">Nome: </label>
+          <input type="text" formControlName="name" class="form-control" id="name" placeholder="Digite seu nome completo">
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email:</label>
+          <input type="email" formControlName="email" class="form-control" id="email" placeholder="Digite seu email">
+        </div>
+        <div class="mb-3">
+          <label for="phone" class="form-label">Telefone:</label>
+          <input type="phoneNumber" formControlName="phone" class="form-control" id="phone" placeholder="Digite seu telefone">
+        </div>
+        <div class="mb-3">
+          <label for="addres" class="form-label">Endereço:</label>
+          <input type="address" formControlName="addres" class="form-control" id="addres" placeholder="Digite seu endereço">
+        </div>
+        <div class="mb-3">
+          <label for="course" class="form-label">Curso:</label>
+          <input type="course" formControlName="course" class="form-control" id="curso" placeholder="Digite seu curso">
+        </div>
+        <div class="mb-3 d-flex justify-content-end">
+          <button class="btn btn-primary me-1" (click)="save()">Salvar</button>
+          <button class="btn btn-danger" (click)="clean()">Limpar</button>
+        </div>
+      </form>
+    </div>
+  </div>

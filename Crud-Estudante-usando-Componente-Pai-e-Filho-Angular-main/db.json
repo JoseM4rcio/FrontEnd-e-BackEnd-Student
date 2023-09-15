@@ -1,0 +1,20 @@
+{
+  "student": [
+    {
+      "id": 2,
+      "name": "Julia Dos Santos",
+      "email": "julia@gmail.com",
+      "phone": "11999999999",
+      "addres": "Quadra CLS 105 Bloco D, Asa Sul",
+      "course": "Desenvolvimento de Sistemas"
+    },
+    {
+      "id": 3,
+      "name": "José Marcio",
+      "email": "marcio@gmail.com",
+      "phone": "11944288930",
+      "addres": "Rua Bento Custódio Machado, José Mendes",
+      "course": "Desenvolvimento de Sistemas"
+    }
+  ]
+}
