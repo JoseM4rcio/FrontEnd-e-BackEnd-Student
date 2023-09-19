@@ -23,7 +23,7 @@ public class Student implements Serializable{
 
     private String phone;
     
-    private String addres;
+    private String address;
 
     private String course;
 
@@ -59,12 +59,12 @@ public class Student implements Serializable{
         this.phone = phone;
     }
 
-    public String getAddres() {
-        return addres;
+    public String getAddress() {
+        return address;
     }
 
-    public void setAddres(String addres) {
-        this.addres = addres;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     public String getCourse() {

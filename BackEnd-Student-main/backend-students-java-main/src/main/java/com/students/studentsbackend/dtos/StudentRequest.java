@@ -15,7 +15,7 @@ public record StudentRequest(
     String phone,
 
     @NotBlank(message = "Endereço não pode ser em branco")
-    String addres,
+    String address,
 
     @NotBlank(message = "Curso não pode ser em branco")
     String course

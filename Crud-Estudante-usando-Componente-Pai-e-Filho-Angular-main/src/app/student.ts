@@ -3,6 +3,6 @@ export interface Student {
     name: string;
     email: string;
     phone: number;
-    addres: string;
+    address: string;
     course: string;
 }

@@ -11,7 +11,7 @@ public class StudentMapper {
         student.setName(request.name());
         student.setEmail(request.email());
         student.setPhone(request.phone());
-        student.setAddres(request.addres());
+        student.setAddress(request.address());
         student.setCourse(request.course());
         return student;
     }
@@ -21,7 +21,7 @@ public class StudentMapper {
                 student.getName(),
                 student.getEmail(),
                 student.getPhone(),
-                student.getAddres(),
+                student.getAddress(),
                 student.getCourse());
     }
 }

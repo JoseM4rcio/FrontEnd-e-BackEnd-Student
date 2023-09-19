@@ -5,22 +5,37 @@
           <div class="display-6 text-center p-3">Cadastro de Estudantes</div>
           <label for="name" class="form-label">Nome: </label>
           <input type="text" formControlName="name" class="form-control" id="name" placeholder="Digite seu nome completo">
+          <div *ngIf="submitted && name.invalid">
+            <small class="text-danger">Nome inválido!</small>
+          </div>
         </div>
         <div class="mb-3">
           <label for="email" class="form-label">Email:</label>
-          <input type="email" formControlName="email" class="form-control" id="email" placeholder="Digite seu email">
+          <input type="text" formControlName="email" class="form-control" id="email" placeholder="Digite seu email">
+          <div *ngIf="submitted && email.invalid">
+            <small class="text-danger">Email inválido!</small>
+          </div>
         </div>
         <div class="mb-3">
           <label for="phone" class="form-label">Telefone:</label>
-          <input type="phoneNumber" formControlName="phone" class="form-control" id="phone" placeholder="Digite seu telefone">
+          <input type="number" formControlName="phone" class="form-control" id="phone" placeholder="Digite seu telefone">
+          <div *ngIf="submitted && phone.invalid">
+            <small class="text-danger">Telefone inválido!</small>
+          </div>
         </div>
         <div class="mb-3">
-          <label for="addres" class="form-label">Endereço:</label>
-          <input type="address" formControlName="addres" class="form-control" id="addres" placeholder="Digite seu endereço">
+          <label for="address" class="form-label">Endereço:</label>
+          <input type="text" formControlName="address" class="form-control" id="address" placeholder="Digite seu endereço">
+          <div *ngIf="submitted && address.invalid">
+            <small class="text-danger">Endereço inválido!</small>
+          </div>
         </div>
         <div class="mb-3">
           <label for="course" class="form-label">Curso:</label>
-          <input type="course" formControlName="course" class="form-control" id="curso" placeholder="Digite seu curso">
+          <input type="text" formControlName="course" class="form-control" id="curso" placeholder="Digite seu curso">
+          <div *ngIf="submitted && course.invalid">
+            <small class="text-danger">Curso inválido!</small>
+          </div>
         </div>
         <div class="mb-3 d-flex justify-content-end">
           <button class="btn btn-primary me-1" (click)="save()">Salvar</button>

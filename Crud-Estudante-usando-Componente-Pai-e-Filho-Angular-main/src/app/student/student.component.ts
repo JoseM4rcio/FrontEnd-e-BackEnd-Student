@@ -11,6 +11,7 @@ export class StudentComponent implements OnInit {
   student: Student[] = [];
   students: Student = {} as Student;
   isEditing: boolean = false;
+  isSubmitted: boolean = false;
 
   constructor(
     private studentService: StudentService
@@ -27,29 +28,32 @@ export class StudentComponent implements OnInit {
   }
 
   onCleanEvent() {
+    this.students = {} as Student;
     this.isEditing = false;
+    this.isSubmitted = false;
   }
 
   onSaveEvent(student: Student) {
     if (this.isEditing) {
-      this.studentService.update(student).subscribe({
-        next: () => {
-          this.loadStudents();
-          this.isEditing = true;
+      this.studentService.update(student).subscribe(
+        {
+          next: () => {
+            this.loadStudents();
+            this.isEditing = false;
+            this.isSubmitted = true;
+          }
         }
-      });
-    }
-    else {
-      this.studentService.save(student).subscribe({
-        next: data => {
-          this.student.push(data)
+      );
+    } else {
+      this.studentService.save(student).subscribe(
+        {
+          next: data => {
+            this.student.push(data);
+            this.isSubmitted = false;
+          }
         }
-       });
+      );
     }
-  }
-
-  clean(){
-    this.isEditing = false;
   }
 
   edit(student: Student) {
